@@ -1,7 +1,11 @@
+/// Trash Theme library is a collection of theme
+/// already defined that the author developed during
+/// the time, and decided to offer it to the community.
+///
+/// author: https://github.com/vincenzopalazzo
 library themes;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+// Export packages
+export 'themes/trash_theme.dart';
+export 'themes/dracula.dart';
+export 'themes/github.dart';
