@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-
 /// Expandable Cars is a Widget that give the possibility to
-/// implement a expandable cart where the user can click over 
+/// implement a expandable cart where the user can click over
 /// to expand the content of the expandable widget
-/// 
+///
 /// author: https://github.com/vincenzopalazzo
 class ExpandableCard extends StatelessWidget {
   final Border? shape;
