@@ -2,8 +2,8 @@ CC=flutter pub global run melos
 CC_TEST=spec
 CC_CHANGELOG=flutter pub global run changelog_cmd
 
-default: analyze
-	$(CC) run build_plugin --no-select
+default: analyze build_example
+
 
 dep:
 	flutter pub global activate melos;
@@ -19,6 +19,9 @@ fmt:
 
 analyze: fmt
 	$(CC) run analyze --no-select
+
+build_example:
+	$(CC) run build_examples --no-select
 
 ci_check_theme:
 	$(CC) run theme_test --no-select
