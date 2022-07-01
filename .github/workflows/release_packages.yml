@@ -1,0 +1,38 @@
+name: publish packages to pub.dev
+
+on:
+  release:
+    types: [created]
+    tags:
+      - packages-v-*
+jobs:
+  publishing_components:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2 # required!
+
+      - name: 'publish trash_component to to pub.dev'
+        uses: k-paxian/dart-package-publisher@master
+        with:
+          credentialJson: ${{ secrets.CREDENTIAL_JSON }}
+          flutter: true
+          skipTests: true
+          dryRunOnly: ${{ github.event_name != 'release' }}
+          relativePath: './packages/components/'
+  publishing_themes:
+    runs-on: ubuntu-latest
+    needs:
+      - publishing_client
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2 # required!
+
+      - name: 'publish trash_theme to to pub.dev'
+        uses: k-paxian/dart-package-publisher@master
+        with:
+          credentialJson: ${{ secrets.CREDENTIAL_JSON }}
+          flutter: true
+          skipTests: true
+          dryRunOnly: ${{ github.event_name != 'release' }}
+          relativePath: './packages/themes/'

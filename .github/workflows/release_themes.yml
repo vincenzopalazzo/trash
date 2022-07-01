@@ -5,6 +5,8 @@ on:
     types: [created]
     tags:
       - trash_themes-v*
+  pull_request:
+    branches: [ main ]
   push:
   workflow_run:
     workflows:
