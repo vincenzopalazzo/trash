@@ -11,6 +11,7 @@ class ExpandableCard extends StatelessWidget {
   final EdgeInsets margin;
   final Widget child;
   final Widget expandableChild;
+  final Alignment expandedAlignment;
 
   const ExpandableCard(
       {Key? key,
@@ -18,7 +19,8 @@ class ExpandableCard extends StatelessWidget {
       this.elevation = 2,
       this.margin = const EdgeInsets.all(12.0),
       required this.child,
-      required this.expandableChild})
+      required this.expandableChild,
+      this.expandedAlignment = Alignment.center})
       : super(key: key);
 
   @override
@@ -32,6 +34,7 @@ class ExpandableCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ExpansionTile(
+          expandedAlignment: expandedAlignment,
           title: child,
           trailing: const SizedBox(),
           children: <Widget>[expandableChild],
