@@ -1,4 +1,4 @@
-name: trash_theme Dart Code sanity check
+name: trash_theme dart code sanity check
 
 on: [ push, pull_request ]
 
