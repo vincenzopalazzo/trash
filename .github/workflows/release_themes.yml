@@ -1,0 +1,32 @@
+name: trash_theme release package
+
+on:
+  release:
+    types: [created]
+    tags:
+      - trash_themes-v*
+  pull_request:
+    branches: [ main ]
+  push:
+  workflow_run:
+    workflows:
+      - "trash_theme dart code sanity check"
+    branches: [ main ]
+    types:
+      - completed
+
+jobs:
+  publishing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2 # required!
+
+      - name: 'publish trash_theme to to pub.dev'
+        uses: k-paxian/dart-package-publisher@master
+        with:
+          credentialJson: ${{ secrets.CREDENTIAL_JSON }}
+          flutter: true
+          skipTests: true
+          dryRunOnly: ${{ github.event_name != 'release' }}
+          relativePath: './packages/themes/'
