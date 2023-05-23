@@ -8,16 +8,16 @@ packages:
 
 scripts:
   analyze:
-    run: melos exec -c 1 -- "flutter format --set-exit-if-changed . && flutter analyze . --fatal-infos"
+    run: melos exec -c 1 -- "dart format --set-exit-if-changed . && flutter analyze . --fatal-infos"
     description: Run dart analyzer in a specific package.
     select-package:
 
   component_analyze:
-    run: melos exec -c 1 --scope="trash_component" -- "flutter format --set-exit-if-changed . && dart analyze . --fatal-infos"
+    run: melos exec -c 1 --scope="trash_component" -- "dart format --set-exit-if-changed . && dart analyze . --fatal-infos"
     description: Run dart analyzer in a specific package.
 
   trash_analyze:
-    run: melos exec -c 1 --scope="trash_themes" -- "flutter format --set-exit-if-changed . && flutter analyze . --fatal-infos"
+    run: melos exec -c 1 --scope="trash_themes" -- "dart format --set-exit-if-changed . && flutter analyze . --fatal-infos"
     description: Run dart analyzer in a specific package.
 
   component_test:
