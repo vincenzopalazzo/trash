@@ -6,7 +6,7 @@ default: analyze build_example
 
 
 dep:
-	flutter pub global activate melos;
+	flutter pub global activate melos 2.9.0;
 	flutter pub global activate spec_cli;
 	flutter pub global activate changelog_cmd;
 	$(CC) bootstrap

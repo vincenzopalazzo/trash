@@ -4,7 +4,7 @@ FMT=format
 default: fmt
 
 fmt:
-	$(CC) $(FMT) lib
+	dart $(FMT) lib
 	$(CC) analyze lib
 
 check:
