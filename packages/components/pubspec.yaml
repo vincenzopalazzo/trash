@@ -1,6 +1,6 @@
 name: trash_component
 description: A well written collection of Flutter component that will solve some problem when the user need to copy and paste dart code
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/vincenzopalazzo/trash
 
 environment:

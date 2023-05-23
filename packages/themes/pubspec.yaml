@@ -1,6 +1,6 @@
 name: trash_themes
 description: Trash is a well written collection of flutter packages to speed up the developing process.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/vincenzopalazzo/trash
 
 environment:
