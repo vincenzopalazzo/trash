@@ -11,22 +11,19 @@ class GithubTheme extends TrashTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primaryColor: const Color.fromARGB(255, 209, 154, 102),
-      backgroundColor: const Color.fromARGB(255, 40, 44, 52),
       primaryTextTheme: const TextTheme(
-        bodyText1: TextStyle(),
-        bodyText2: TextStyle(),
-        headline5: TextStyle(fontWeight: FontWeight.bold),
-        caption: TextStyle(fontStyle: FontStyle.normal, fontSize: 13),
+        bodyLarge: TextStyle(),
+        bodyMedium: TextStyle(),
+        headlineSmall: TextStyle(fontWeight: FontWeight.bold),
+        bodySmall: TextStyle(fontStyle: FontStyle.normal, fontSize: 13),
       ).apply(
         bodyColor: const Color.fromARGB(255, 151, 159, 173),
         decorationColor: const Color.fromARGB(255, 151, 159, 173),
       ),
       cardColor: const Color.fromARGB(255, 47, 51, 61),
-      selectedRowColor: const Color.fromARGB(255, 72, 79, 114),
       dialogBackgroundColor: const Color.fromARGB(255, 30, 30, 30),
       disabledColor: const Color.fromARGB(255, 98, 114, 164),
       canvasColor: const Color.fromARGB(255, 40, 42, 54),
-      toggleableActiveColor: const Color.fromARGB(255, 255, 121, 197),
       unselectedWidgetColor: const Color.fromARGB(255, 98, 114, 164),
       colorScheme: const ColorScheme.dark(
         background: Color.fromARGB(255, 40, 44, 52),
@@ -44,10 +41,10 @@ class GithubTheme extends TrashTheme {
         suffixStyle: TextStyle(color: Color.fromARGB(255, 151, 159, 173)),
       ),
       textTheme: const TextTheme(
-        bodyText1: TextStyle(),
-        bodyText2: TextStyle(),
-        headline5: TextStyle(fontWeight: FontWeight.bold),
-        caption: TextStyle(fontStyle: FontStyle.normal, fontSize: 13),
+        bodyLarge: TextStyle(),
+        bodyMedium: TextStyle(),
+        headlineSmall: TextStyle(fontWeight: FontWeight.bold),
+        bodySmall: TextStyle(fontStyle: FontStyle.normal, fontSize: 13),
       ).apply(
         bodyColor: const Color.fromARGB(255, 151, 159, 173),
         decorationColor: const Color.fromARGB(255, 151, 159, 173),
