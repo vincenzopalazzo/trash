@@ -18,6 +18,7 @@ class GlobalComponent {
       required String message,
       required String closeMsg,
       required ImageProvider imageProvided,
+      Function? onClose,
       bool withIcon = true}) {
     showDialog(
       context: context,
@@ -50,7 +51,12 @@ class GlobalComponent {
           actions: <Widget>[
             TextButton(
               child: Text(closeMsg),
-              onPressed: () => Navigator.of(context).pop(),
+              onPressed: () {
+                if (onClose != null) {
+                  onClose()!;
+                }
+                Navigator.pop(context);
+              },
             ),
           ],
         );
